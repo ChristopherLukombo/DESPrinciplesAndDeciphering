@@ -16,8 +16,7 @@ from DESPrinciplesAndDecipheringException import *
 class Des:
 
     def __init__(self):
-        self.constants_des_provider = ConstantsDesProvider()
-        self.constants_by_key = self.constants_des_provider.build_constants_by_key()
+        self.constants_by_key = ConstantsDesProvider().build_constants_by_key()
 
         # substitution matrices
         self.substitution_matrices = [self.constants_by_key['S1'], self.constants_by_key['S2'],
